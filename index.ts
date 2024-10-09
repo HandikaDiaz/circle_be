@@ -3,9 +3,9 @@ import dotenv from "dotenv";
 import express, { Express } from "express";
 import swaggerUI from "swagger-ui-express";
 import swaggerDocument from "../swagger/swagger-output.json";
-import { errorMiddleware } from "./middlewares/errorMiddleware";
-import { routerV1 } from "./routes/v1";
-import upload from "./middlewares/uploadImage";
+import { errorMiddleware } from "./src/middlewares/errorMiddleware";
+import { routerV1 } from "./src/routes/v1";
+import upload from "./src/middlewares/uploadImage";
 
 dotenv.config();
 
