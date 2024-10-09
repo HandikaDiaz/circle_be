@@ -6,10 +6,12 @@ import userController from "../controllers/user.controller";
 import { authentication } from "../middlewares/authenticationMiddleware";
 import { catchAsync } from "../utils/catch.async";
 import upload from "../middlewares/uploadImage";
-import LikeController from "../controllers/like.controller";
+import LikeController from "../controllers/like.post.controller";
 import FollowController from "../controllers/follow.controller";
 import { searchController } from "../controllers/search.controller";
 import { authorize } from "../middlewares/authorization";
+import likePostController from "../controllers/like.post.controller";
+import likeReplyController from "../controllers/like.reply.controller";
 
 // Inisialisasi router versi 1
 export const routerV1 = express.Router();
@@ -61,9 +63,11 @@ routerV1.get("/profile/post/:userId", catchAsync(postController.getPostByUserId)
 
 /** Like Routes **/
 // Menyukai postingan berdasarkan ID
-routerV1.post("/post/:postId/like", catchAsync(authentication), catchAsync(LikeController.likePost));
+routerV1.post("/post/:postId/like", catchAsync(authentication), catchAsync(likePostController.likePost));
+routerV1.post("/reply/:replyId/like", catchAsync(authentication), catchAsync(likeReplyController.likeReply));
 // Mendapatkan semua like dari sebuah postingan
-routerV1.get("/post/:postId/like", catchAsync(authentication), catchAsync(LikeController.getLikes));
+routerV1.get("/post/:postId/like", catchAsync(authentication), catchAsync(likePostController.getLikes));
+routerV1.get("/reply/:replyId/like", catchAsync(authentication), catchAsync(likeReplyController.getLikes));
 
 /** Follow Routes **/
 // Mengecek status follow seorang pengguna

@@ -40,7 +40,7 @@ class AuthService {
         const user = await prisma.user.findFirst({
             where: {
                 OR: [
-                    { email: data.email },
+                    { email: data.userName },
                     { userName: data.userName }
                 ],
             },
