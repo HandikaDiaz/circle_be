@@ -8,6 +8,9 @@
                 "includeFiles": [
                     "dist/**"
                 ]
+            },
+            "env": {
+                "NODE_ENV": "production"
             }
         }
     ],
@@ -16,5 +19,8 @@
             "source": "/(.*)",
             "destination": "/"
         }
-    ]
+    ],
+    "scripts": {
+        "build": "npm install && npm run build"
+    }
 }

@@ -5,12 +5,32 @@ import swaggerUI from "swagger-ui-express";
 import swaggerDocument from "../swagger/swagger-output.json";
 import { errorMiddleware } from "./src/middlewares/errorMiddleware";
 import { routerV1 } from "./src/routes/v1";
-import upload from "./src/middlewares/uploadImage";
+import swaggerJsdoc from "swagger-jsdoc";
 
 dotenv.config();
 
 const app: Express = express();
 const port = process.env.PORT || 3000;
+
+const swaggerOptions = {
+    swaggerDefinition: {
+        openapi: '3.0.0',
+        info: {
+            title: 'API Documentation',
+            version: '1.0.0',
+            description: 'This is a sample API documentation using Swagger',
+        },
+        servers: [
+            {
+                url: 'http://localhost:3000',
+            },
+        ],
+    },
+    apis: ['./routes/*.js'], // Path to your API routes
+};
+
+const swaggerDocs = swaggerJsdoc(swaggerOptions);
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
