@@ -26,7 +26,7 @@ const swaggerOptions = {
             },
         ],
     },
-    apis: ['./routes/*.js'], // Path to your API routes
+    apis: ['./src/routes/v1.ts'],
 };
 
 const swaggerDocs = swaggerJsdoc(swaggerOptions);
@@ -36,7 +36,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.use('/uploadImage', express.static('uploadImage'));
-app.use("/docs", swaggerUI.serve, swaggerUI.setup(swaggerDocument, {
+app.use("/docs", swaggerUI.serve, swaggerUI.setup(swaggerDocs, {
     explorer: true,
     swaggerOptions: {
         persistAuthorization: true,
