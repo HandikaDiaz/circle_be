@@ -19,8 +19,5 @@
             "source": "/(.*)",
             "destination": "/"
         }
-    ],
-    "scripts": {
-        "build": "npm install && npm run build"
-    }
+    ]
 }
