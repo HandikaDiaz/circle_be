@@ -6,7 +6,8 @@
     "build": "prisma generate && tsc",
     "postinstall": "prisma generate",
     "start": "node dist/index.js",
-    "dev": "nodemon src/index.ts",
+    "dev": "nodemon index.ts",
+    "vercel-build": "prisma generate && prisma migrate deploy && next build",
     "swagger": "node ./swagger/swagger.js"
   },
   "keywords": [],

@@ -2,7 +2,6 @@ import cors from "cors";
 import dotenv from "dotenv";
 import express, { Express } from "express";
 import swaggerUI from "swagger-ui-express";
-import swaggerDocument from "../swagger/swagger-output.json";
 import { errorMiddleware } from "./src/middlewares/errorMiddleware";
 import { routerV1 } from "./src/routes/v1";
 import swaggerJsdoc from "swagger-jsdoc";
