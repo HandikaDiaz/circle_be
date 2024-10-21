@@ -35,6 +35,10 @@ routerV1.post("/auth/login", catchAsync(authController.login));
 // Mengecek status autentikasi pengguna
 routerV1.get("/auth/check", catchAsync(authentication), catchAsync(authController.check));
 
+routerV1.post('/auth/forgot-password', catchAsync(authController.forgot));
+routerV1.get('/auth/reset-password/:token', catchAsync(authController.reset));
+routerV1.post('/auth/reset-password/:token', catchAsync(authController.reset));
+
 /** User Routes **/
 // Mengupdate data pengguna yang telah diautentikasi
 routerV1.put("/user", catchAsync(authentication), upload.fields([{ name: 'image', maxCount: 1 }, { name: 'background', maxCount: 1 }]), catchAsync(userController.update));
@@ -88,8 +92,6 @@ routerV1.delete("/userDelete/:id", catchAsync(authentication), catchAsync(author
 /** Future Routes (Komentar)**/
 // Update postingan berdasarkan ID (belum diaktifkan)
 // routerV1.put("/post/:id", catchAsync(postController.updatePost));
-
-// Menghapus postingan berdasarkan ID (belum diaktifkan)
 
 // Mengupdate balasan berdasarkan ID (belum diaktifkan)
 // routerV1.put("/reply/:id", catchAsync(replyController.updateReply));

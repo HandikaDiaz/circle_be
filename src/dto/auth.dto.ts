@@ -8,3 +8,7 @@ export type LoginDTO = {
     userName: string;
     password: string;
 }
+
+export type forgotPasswordDTO = {
+    userName: string;
+}

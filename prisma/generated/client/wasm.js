@@ -144,6 +144,7 @@ exports.Prisma.PostScalarFieldEnum = {
   repliesCount: 'repliesCount',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt',
+  mainReplyId: 'mainReplyId',
   authorId: 'authorId'
 };
 
