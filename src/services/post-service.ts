@@ -1,4 +1,4 @@
-import { Post, PrismaClient } from "@prisma/client";
+import { Post, PrismaClient } from "../../prisma/generated/client";
 import { CreatePostDTO, UpdatePostDTO } from "../dto/post.dto";
 
 const prisma = new PrismaClient();

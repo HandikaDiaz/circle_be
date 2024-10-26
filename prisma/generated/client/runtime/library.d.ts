@@ -1137,15 +1137,12 @@ declare type EngineSpan = {
         trace_id: string;
         span_id: string;
     }[];
-    kind: EngineSpanKind;
 };
 
 declare type EngineSpanEvent = {
     span: boolean;
     spans: EngineSpan[];
 };
-
-declare type EngineSpanKind = 'client' | 'internal';
 
 declare type EnvPaths = {
     rootEnvPath: string | null;
@@ -1844,8 +1841,6 @@ declare enum IsolationLevel {
 }
 
 declare function isSkip(value: unknown): value is Skip;
-
-export declare function isTypedSql(value: unknown): value is UnknownTypedSql;
 
 export declare type ITXClientDenyList = (typeof denylist)[number];
 

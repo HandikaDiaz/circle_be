@@ -1,4 +1,4 @@
-import { PrismaClient, User } from "@prisma/client";
+import { PrismaClient, User } from "../../prisma/generated/client";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import { forgotPasswordDTO, LoginDTO, RegisterDTO } from "../dto/auth.dto";
