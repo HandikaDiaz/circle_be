@@ -173,7 +173,7 @@ exports.Prisma.LikeScalarFieldEnum = {
   userId: 'userId',
   postId: 'postId',
   replyId: 'replyId',
-  cratedAt: 'cratedAt'
+  createdAt: 'createdAt'
 };
 
 exports.Prisma.SortOrder = {

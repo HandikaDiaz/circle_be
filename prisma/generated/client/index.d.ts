@@ -5701,7 +5701,7 @@ export namespace Prisma {
     userId: number | null
     postId: number | null
     replyId: number | null
-    cratedAt: Date | null
+    createdAt: Date | null
   }
 
   export type LikeMaxAggregateOutputType = {
@@ -5709,7 +5709,7 @@ export namespace Prisma {
     userId: number | null
     postId: number | null
     replyId: number | null
-    cratedAt: Date | null
+    createdAt: Date | null
   }
 
   export type LikeCountAggregateOutputType = {
@@ -5717,7 +5717,7 @@ export namespace Prisma {
     userId: number
     postId: number
     replyId: number
-    cratedAt: number
+    createdAt: number
     _all: number
   }
 
@@ -5741,7 +5741,7 @@ export namespace Prisma {
     userId?: true
     postId?: true
     replyId?: true
-    cratedAt?: true
+    createdAt?: true
   }
 
   export type LikeMaxAggregateInputType = {
@@ -5749,7 +5749,7 @@ export namespace Prisma {
     userId?: true
     postId?: true
     replyId?: true
-    cratedAt?: true
+    createdAt?: true
   }
 
   export type LikeCountAggregateInputType = {
@@ -5757,7 +5757,7 @@ export namespace Prisma {
     userId?: true
     postId?: true
     replyId?: true
-    cratedAt?: true
+    createdAt?: true
     _all?: true
   }
 
@@ -5852,7 +5852,7 @@ export namespace Prisma {
     userId: number
     postId: number | null
     replyId: number | null
-    cratedAt: Date
+    createdAt: Date
     _count: LikeCountAggregateOutputType | null
     _avg: LikeAvgAggregateOutputType | null
     _sum: LikeSumAggregateOutputType | null
@@ -5879,7 +5879,7 @@ export namespace Prisma {
     userId?: boolean
     postId?: boolean
     replyId?: boolean
-    cratedAt?: boolean
+    createdAt?: boolean
     user?: boolean | UserDefaultArgs<ExtArgs>
     post?: boolean | Like$postArgs<ExtArgs>
     reply?: boolean | Like$replyArgs<ExtArgs>
@@ -5890,7 +5890,7 @@ export namespace Prisma {
     userId?: boolean
     postId?: boolean
     replyId?: boolean
-    cratedAt?: boolean
+    createdAt?: boolean
     user?: boolean | UserDefaultArgs<ExtArgs>
     post?: boolean | Like$postArgs<ExtArgs>
     reply?: boolean | Like$replyArgs<ExtArgs>
@@ -5901,7 +5901,7 @@ export namespace Prisma {
     userId?: boolean
     postId?: boolean
     replyId?: boolean
-    cratedAt?: boolean
+    createdAt?: boolean
   }
 
   export type LikeInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -5927,7 +5927,7 @@ export namespace Prisma {
       userId: number
       postId: number | null
       replyId: number | null
-      cratedAt: Date
+      createdAt: Date
     }, ExtArgs["result"]["like"]>
     composites: {}
   }
@@ -6328,7 +6328,7 @@ export namespace Prisma {
     readonly userId: FieldRef<"Like", 'Int'>
     readonly postId: FieldRef<"Like", 'Int'>
     readonly replyId: FieldRef<"Like", 'Int'>
-    readonly cratedAt: FieldRef<"Like", 'DateTime'>
+    readonly createdAt: FieldRef<"Like", 'DateTime'>
   }
     
 
@@ -6768,7 +6768,7 @@ export namespace Prisma {
     userId: 'userId',
     postId: 'postId',
     replyId: 'replyId',
-    cratedAt: 'cratedAt'
+    createdAt: 'createdAt'
   };
 
   export type LikeScalarFieldEnum = (typeof LikeScalarFieldEnum)[keyof typeof LikeScalarFieldEnum]
@@ -7223,7 +7223,7 @@ export namespace Prisma {
     userId?: IntFilter<"Like"> | number
     postId?: IntNullableFilter<"Like"> | number | null
     replyId?: IntNullableFilter<"Like"> | number | null
-    cratedAt?: DateTimeFilter<"Like"> | Date | string
+    createdAt?: DateTimeFilter<"Like"> | Date | string
     user?: XOR<UserRelationFilter, UserWhereInput>
     post?: XOR<PostNullableRelationFilter, PostWhereInput> | null
     reply?: XOR<ReplyNullableRelationFilter, ReplyWhereInput> | null
@@ -7234,7 +7234,7 @@ export namespace Prisma {
     userId?: SortOrder
     postId?: SortOrderInput | SortOrder
     replyId?: SortOrderInput | SortOrder
-    cratedAt?: SortOrder
+    createdAt?: SortOrder
     user?: UserOrderByWithRelationInput
     post?: PostOrderByWithRelationInput
     reply?: ReplyOrderByWithRelationInput
@@ -7250,7 +7250,7 @@ export namespace Prisma {
     userId?: IntFilter<"Like"> | number
     postId?: IntNullableFilter<"Like"> | number | null
     replyId?: IntNullableFilter<"Like"> | number | null
-    cratedAt?: DateTimeFilter<"Like"> | Date | string
+    createdAt?: DateTimeFilter<"Like"> | Date | string
     user?: XOR<UserRelationFilter, UserWhereInput>
     post?: XOR<PostNullableRelationFilter, PostWhereInput> | null
     reply?: XOR<ReplyNullableRelationFilter, ReplyWhereInput> | null
@@ -7261,7 +7261,7 @@ export namespace Prisma {
     userId?: SortOrder
     postId?: SortOrderInput | SortOrder
     replyId?: SortOrderInput | SortOrder
-    cratedAt?: SortOrder
+    createdAt?: SortOrder
     _count?: LikeCountOrderByAggregateInput
     _avg?: LikeAvgOrderByAggregateInput
     _max?: LikeMaxOrderByAggregateInput
@@ -7277,7 +7277,7 @@ export namespace Prisma {
     userId?: IntWithAggregatesFilter<"Like"> | number
     postId?: IntNullableWithAggregatesFilter<"Like"> | number | null
     replyId?: IntNullableWithAggregatesFilter<"Like"> | number | null
-    cratedAt?: DateTimeWithAggregatesFilter<"Like"> | Date | string
+    createdAt?: DateTimeWithAggregatesFilter<"Like"> | Date | string
   }
 
   export type UserCreateInput = {
@@ -7621,7 +7621,7 @@ export namespace Prisma {
   }
 
   export type LikeCreateInput = {
-    cratedAt?: Date | string
+    createdAt?: Date | string
     user: UserCreateNestedOneWithoutLikeInput
     post?: PostCreateNestedOneWithoutLikeInput
     reply?: ReplyCreateNestedOneWithoutLikeInput
@@ -7632,11 +7632,11 @@ export namespace Prisma {
     userId: number
     postId?: number | null
     replyId?: number | null
-    cratedAt?: Date | string
+    createdAt?: Date | string
   }
 
   export type LikeUpdateInput = {
-    cratedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     user?: UserUpdateOneRequiredWithoutLikeNestedInput
     post?: PostUpdateOneWithoutLikeNestedInput
     reply?: ReplyUpdateOneWithoutLikeNestedInput
@@ -7647,7 +7647,7 @@ export namespace Prisma {
     userId?: IntFieldUpdateOperationsInput | number
     postId?: NullableIntFieldUpdateOperationsInput | number | null
     replyId?: NullableIntFieldUpdateOperationsInput | number | null
-    cratedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type LikeCreateManyInput = {
@@ -7655,11 +7655,11 @@ export namespace Prisma {
     userId: number
     postId?: number | null
     replyId?: number | null
-    cratedAt?: Date | string
+    createdAt?: Date | string
   }
 
   export type LikeUpdateManyMutationInput = {
-    cratedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type LikeUncheckedUpdateManyInput = {
@@ -7667,7 +7667,7 @@ export namespace Prisma {
     userId?: IntFieldUpdateOperationsInput | number
     postId?: NullableIntFieldUpdateOperationsInput | number | null
     replyId?: NullableIntFieldUpdateOperationsInput | number | null
-    cratedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type IntFilter<$PrismaModel = never> = {
@@ -8120,7 +8120,7 @@ export namespace Prisma {
     userId?: SortOrder
     postId?: SortOrder
     replyId?: SortOrder
-    cratedAt?: SortOrder
+    createdAt?: SortOrder
   }
 
   export type LikeAvgOrderByAggregateInput = {
@@ -8135,7 +8135,7 @@ export namespace Prisma {
     userId?: SortOrder
     postId?: SortOrder
     replyId?: SortOrder
-    cratedAt?: SortOrder
+    createdAt?: SortOrder
   }
 
   export type LikeMinOrderByAggregateInput = {
@@ -8143,7 +8143,7 @@ export namespace Prisma {
     userId?: SortOrder
     postId?: SortOrder
     replyId?: SortOrder
-    cratedAt?: SortOrder
+    createdAt?: SortOrder
   }
 
   export type LikeSumOrderByAggregateInput = {
@@ -9009,7 +9009,7 @@ export namespace Prisma {
   }
 
   export type LikeCreateWithoutUserInput = {
-    cratedAt?: Date | string
+    createdAt?: Date | string
     post?: PostCreateNestedOneWithoutLikeInput
     reply?: ReplyCreateNestedOneWithoutLikeInput
   }
@@ -9018,7 +9018,7 @@ export namespace Prisma {
     id?: number
     postId?: number | null
     replyId?: number | null
-    cratedAt?: Date | string
+    createdAt?: Date | string
   }
 
   export type LikeCreateOrConnectWithoutUserInput = {
@@ -9160,7 +9160,7 @@ export namespace Prisma {
     userId?: IntFilter<"Like"> | number
     postId?: IntNullableFilter<"Like"> | number | null
     replyId?: IntNullableFilter<"Like"> | number | null
-    cratedAt?: DateTimeFilter<"Like"> | Date | string
+    createdAt?: DateTimeFilter<"Like"> | Date | string
   }
 
   export type PostCreateWithoutRepliesInput = {
@@ -9266,7 +9266,7 @@ export namespace Prisma {
   }
 
   export type LikeCreateWithoutPostInput = {
-    cratedAt?: Date | string
+    createdAt?: Date | string
     user: UserCreateNestedOneWithoutLikeInput
     reply?: ReplyCreateNestedOneWithoutLikeInput
   }
@@ -9275,7 +9275,7 @@ export namespace Prisma {
     id?: number
     userId: number
     replyId?: number | null
-    cratedAt?: Date | string
+    createdAt?: Date | string
   }
 
   export type LikeCreateOrConnectWithoutPostInput = {
@@ -9461,7 +9461,7 @@ export namespace Prisma {
   }
 
   export type LikeCreateWithoutReplyInput = {
-    cratedAt?: Date | string
+    createdAt?: Date | string
     user: UserCreateNestedOneWithoutLikeInput
     post?: PostCreateNestedOneWithoutLikeInput
   }
@@ -9470,7 +9470,7 @@ export namespace Prisma {
     id?: number
     userId: number
     postId?: number | null
-    cratedAt?: Date | string
+    createdAt?: Date | string
   }
 
   export type LikeCreateOrConnectWithoutReplyInput = {
@@ -10085,7 +10085,7 @@ export namespace Prisma {
     id?: number
     postId?: number | null
     replyId?: number | null
-    cratedAt?: Date | string
+    createdAt?: Date | string
   }
 
   export type FollowUpdateWithoutFollowingInput = {
@@ -10201,7 +10201,7 @@ export namespace Prisma {
   }
 
   export type LikeUpdateWithoutUserInput = {
-    cratedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     post?: PostUpdateOneWithoutLikeNestedInput
     reply?: ReplyUpdateOneWithoutLikeNestedInput
   }
@@ -10210,14 +10210,14 @@ export namespace Prisma {
     id?: IntFieldUpdateOperationsInput | number
     postId?: NullableIntFieldUpdateOperationsInput | number | null
     replyId?: NullableIntFieldUpdateOperationsInput | number | null
-    cratedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type LikeUncheckedUpdateManyWithoutUserInput = {
     id?: IntFieldUpdateOperationsInput | number
     postId?: NullableIntFieldUpdateOperationsInput | number | null
     replyId?: NullableIntFieldUpdateOperationsInput | number | null
-    cratedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type PostCreateManyMainReplyInput = {
@@ -10246,7 +10246,7 @@ export namespace Prisma {
     id?: number
     userId: number
     replyId?: number | null
-    cratedAt?: Date | string
+    createdAt?: Date | string
   }
 
   export type PostUpdateWithoutMainReplyInput = {
@@ -10322,7 +10322,7 @@ export namespace Prisma {
   }
 
   export type LikeUpdateWithoutPostInput = {
-    cratedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     user?: UserUpdateOneRequiredWithoutLikeNestedInput
     reply?: ReplyUpdateOneWithoutLikeNestedInput
   }
@@ -10331,25 +10331,25 @@ export namespace Prisma {
     id?: IntFieldUpdateOperationsInput | number
     userId?: IntFieldUpdateOperationsInput | number
     replyId?: NullableIntFieldUpdateOperationsInput | number | null
-    cratedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type LikeUncheckedUpdateManyWithoutPostInput = {
     id?: IntFieldUpdateOperationsInput | number
     userId?: IntFieldUpdateOperationsInput | number
     replyId?: NullableIntFieldUpdateOperationsInput | number | null
-    cratedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type LikeCreateManyReplyInput = {
     id?: number
     userId: number
     postId?: number | null
-    cratedAt?: Date | string
+    createdAt?: Date | string
   }
 
   export type LikeUpdateWithoutReplyInput = {
-    cratedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     user?: UserUpdateOneRequiredWithoutLikeNestedInput
     post?: PostUpdateOneWithoutLikeNestedInput
   }
@@ -10358,14 +10358,14 @@ export namespace Prisma {
     id?: IntFieldUpdateOperationsInput | number
     userId?: IntFieldUpdateOperationsInput | number
     postId?: NullableIntFieldUpdateOperationsInput | number | null
-    cratedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type LikeUncheckedUpdateManyWithoutReplyInput = {
     id?: IntFieldUpdateOperationsInput | number
     userId?: IntFieldUpdateOperationsInput | number
     postId?: NullableIntFieldUpdateOperationsInput | number | null
-    cratedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
 
