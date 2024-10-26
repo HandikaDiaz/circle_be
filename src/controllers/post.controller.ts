@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import { postSchema } from "../utils/schema/post.schema";
 import postService from "../services/post-service";
 import { RequestWithUser } from "../types/post";
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from "../../prisma/generated/client";
 import cloudinaryService from "../services/cloudinary.service";
 import { formatDistanceToNow } from 'date-fns';
 import { CustomError } from "../middlewares/errorHandler";
