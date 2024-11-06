@@ -1,7 +1,7 @@
-import { PrismaClient, User } from "../../prisma/generated/client";
+import { PrismaClient, User } from "@prisma/client";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import { forgotPasswordDTO, LoginDTO, RegisterDTO } from "../dto/auth.dto";
+import { LoginDTO, RegisterDTO } from "../dto/auth.dto";
 import { CustomError } from "../middlewares/errorHandler";
 import { sendEmail } from "./mail-service";
 

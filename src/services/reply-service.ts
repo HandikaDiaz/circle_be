@@ -1,4 +1,4 @@
-import { PrismaClient, Reply } from "../../prisma/generated/client";
+import { PrismaClient, Reply } from "@prisma/client";
 import { ReplyDTO, UpdateReplyDTO } from "../dto/reply.dto";
 import { CustomError } from "../middlewares/errorHandler";
 

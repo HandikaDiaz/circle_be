@@ -1,4 +1,4 @@
-import { Post, PrismaClient, User } from "../../prisma/generated/client";
+import { Post, PrismaClient, User } from "@prisma/client";
 import { UpdateUserDTO } from "../dto/user.dto";
 import { CustomError } from "../middlewares/errorHandler";
 
