@@ -1,3 +1,4 @@
+import { Multer } from "multer";
 import { v2 as cloudinary } from "cloudinary";
 
 class CloudinaryService {

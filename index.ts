@@ -2,6 +2,7 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const express = require("express");
 const swaggerUI = require("swagger-ui-express");
+import { Request, Response } from "express";
 import { errorMiddleware } from "./src/middlewares/errorMiddleware";
 import { routerV1 } from "./src/routes/v1";
 const swaggerJsdoc = require("swagger-jsdoc");
@@ -43,7 +44,7 @@ app.use("/docs", swaggerUI.serve, swaggerUI.setup(swaggerDocs, {
     }
 }));
 app.use("/api/v1", routerV1);
-app.get("/", (_, res) => {
+app.get("/", (req: Request, res: Response) => {
     res.json({ message: "Hello from Circle API!" });
 })
 app.use(errorMiddleware);
@@ -51,4 +52,3 @@ app.use(errorMiddleware);
 app.listen(port, () => {
     console.log(`[server]: Server is running at http://localhost:${port}`);
 });
-
